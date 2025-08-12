@@ -1,40 +1,31 @@
-# claude-code-workflows
-The best workflows and configurations I've developed heavily using Claude Code since the day of it's release. Workflows are based off applied learnings from our AI-native startup.
-# Claude Code Best Practices
+## Design Review Workflow
 
-This is a simple repo to summarize various articles/blog posts about the best ways to use Claude Code and synthesize this into a unified best practices guide here: [Claude Code Best Practices](index.md). This is authored by Claude Code itself.
+This directory contains templates and examples for implementing an automated design review system that provides feedback on front-end code changes with design implications. This workflow allows engineers to automatically run design reviews on pull requests or working changes, ensuring design consistency and quality throughout the development process.
 
-Given Claude Code is only a few months old now and agentic coding is still very much a nascent domain, the intent is to have this repo stay live/current. Please consider contributing/participating as detailed below.
+### Concept
 
-## Collation
+This workflow establishes a comprehensive methodology for automated design reviews in Claude Code, leveraging multiple advanced features to ensure world-class UI/UX standards in your codebase:
 
-Read the collation and analysis here:
+**Core Methodology:**
+- **Automated Design Reviews**: Trigger comprehensive design assessments either automatically on PRs or on-demand via slash commands
+- **Live Environment Testing**: Uses Playwright MCP server integration to interact with and test actual UI components in real-time, not just static code analysis
+- **Standards-Based Evaluation**: Follows rigorous design principles inspired by top-tier companies (Stripe, Airbnb, Linear), covering visual hierarchy, accessibility (WCAG AA+), responsive design, and interaction patterns
 
-[rosmur.github.io/claudecode-best-practices/](https://rosmur.github.io/claudecode-best-practices/)
+**Implementation Features:**
+- **Claude Code Subagents**: Deploy specialized design review agents with pre-configured tools and prompts for consistent, thorough reviews, by taging `@agent-code-reviewer`
+- **Slash Commands**: Enable instant design reviews with `/design-review` that automatically analyzes git diffs and provides structured feedback
+- **CLAUDE.md Memory Integration**: Store design principles and brand guidelines in your project's CLAUDE.md file, ensuring Claude Code always references your specific design system
+- **Multi-Phase Review Process**: Systematic evaluation covering interaction flows, responsiveness, visual polish, accessibility, robustness testing, and code health
 
-## Process
+This approach transforms design reviews from manual, subjective processes into automated, objective assessments that maintain consistency across your entire frontend development workflow.
 
-### Source Acquisition
+### Resources
 
-Mostly through encountering top performing (lot of upvotes) posts on Hackernews and Reddit. The current sources indexed are [here](sources.csv)
+#### Templates & Examples
+- [Design Principles Example](./design-review/design-principles-example.md) - Sample design principles document for guiding automated reviews
+- [Design Review Agent](./design-review/design-review-agent.md) - Agent configuration for automated design reviews
+- [Claude.md Snippet](./design-review/design-review-claude-md-snippet.md) - Claude.md configuration snippet for design review integration
+- [Slash Command](./design-review/design-review-slash-command.md) - Custom slash command implementation for on-demand design reviews
 
-### Source Content Fetching
-
-The content from each source is fetched through `article_fetcher.py`.
-
-### Analysis
-
-Claude Code (using Opus 4.1) is asked to analyze the source content with this [prompt](analysis-prompt.md).  The prompt was initially written by me, then reviewed/enhanced by Claude Code, then reviewed, edited and finalized by me.
-
-
-## Contributing
-
-If you have new sources to add, find any errors, issues or have feedback to the recommendations, please open a GitHub Issue.
-
-Please use the discussion section to suggest new articles to include in this repo or add new tips, practices etc.
-
-## Roadmap
-
-- [ ] Automate summary update when new sources are added
-- [x] Codify synthesis+summarization prompt
-- [ ] Update content based on discussions in GitHub Issues and Discussions sections
+#### Video Tutorial
+For a detailed walkthrough of this workflow, watch the comprehensive tutorial on YouTube: [Patrick Ellis' Channel](https://www.youtube.com/@PatrickOakleyEllis)
