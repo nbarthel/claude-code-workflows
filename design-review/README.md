@@ -8,7 +8,7 @@ This workflow establishes a comprehensive methodology for automated design revie
 
 **Core Methodology:**
 - **Automated Design Reviews**: Trigger comprehensive design assessments either automatically on PRs or on-demand via slash commands
-- **Live Environment Testing**: Uses Playwright MCP server integration to interact with and test actual UI components in real-time, not just static code analysis
+- **Live Environment Testing**: Uses [Playwright MCP](https://github.com/microsoft/playwright-mcp) server integration to interact with and test actual UI components in real-time, not just static code analysis
 - **Standards-Based Evaluation**: Follows rigorous design principles inspired by top-tier companies (Stripe, Airbnb, Linear), covering visual hierarchy, accessibility (WCAG AA+), responsive design, and interaction patterns
 
 **Implementation Features:**

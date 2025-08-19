@@ -9,6 +9,4 @@ Workflows are covered in detail with tutorials and demos on [Patrick Ellis' YouT
 ## Workflows
 
 ### [Design Review Workflow](./design-review/)
-
-An automated design review system that provides comprehensive feedback on front-end code changes. This workflow uses Playwright browser automation and specialized Claude Code agents to ensure UI/UX consistency, accessibility compliance, and adherence to world-class design standards. Perfect for maintaining design quality across teams and catching visual issues before they reach production.
-
+An automated design review system that provides comprehensive feedback on front-end code changes. This workflow uses Microsoft's open source [Playwright MCP](https://github.com/microsoft/playwright-mcp) browser automation and specialized Claude Code agents to ensure UI/UX consistency, accessibility compliance, and adherence to world-class design standards. Perfect for maintaining design quality across teams and catching visual issues before they reach production.
